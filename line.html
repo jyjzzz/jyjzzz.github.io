@@ -1,0 +1,140 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>LineChartIDb5818054e24</title>
+<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+<style type="text/css">
+body {
+  color: #444444;
+  font-family: Arial,Helvetica,sans-serif;
+  font-size: 75%;
+  }
+  a {
+  color: #4D87C7;
+  text-decoration: none;
+}
+</style>
+</head>
+<body>
+ <!-- LineChart generated in R 3.2.0 by googleVis 0.5.10 package -->
+<!-- Sun May 29 00:06:22 2016 -->
+
+
+<!-- jsHeader -->
+<script type="text/javascript">
+ 
+// jsData 
+function gvisDataLineChartIDb5818054e24 () {
+var data = new google.visualization.DataTable();
+var datajson =
+[
+ [
+ "Afghanistan",
+60.02826829 
+],
+[
+ "Angola",
+51.86617073 
+],
+[
+ "Albania",
+77.64046341 
+],
+[
+ "United Arab Emirates",
+77.19563415 
+] 
+];
+data.addColumn('string','Country.Name');
+data.addColumn('number','lifeExp');
+data.addRows(datajson);
+return(data);
+}
+ 
+// jsDrawChart
+function drawChartLineChartIDb5818054e24() {
+var data = gvisDataLineChartIDb5818054e24();
+var options = {};
+options["allowHtml"] = true;
+
+
+    chartLineChartIDb5818054e24 = new google.visualization.ChartWrapper({
+    dataTable: data,       
+    chartType: 'LineChart',
+    containerId: 'LineChartIDb5818054e24',
+    options: options
+    });
+    chartLineChartIDb5818054e24.draw();
+    
+
+}
+
+  function openEditorLineChartIDb5818054e24() {
+  var editor = new google.visualization.ChartEditor();
+  google.visualization.events.addListener(editor, 'ok',
+  function() { 
+  chartLineChartIDb5818054e24 = editor.getChartWrapper();  
+  chartLineChartIDb5818054e24.draw(document.getElementById('LineChartIDb5818054e24')); 
+  }); 
+  editor.openDialog(chartLineChartIDb5818054e24);
+  }
+    
+ 
+// jsDisplayChart
+(function() {
+var pkgs = window.__gvisPackages = window.__gvisPackages || [];
+var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
+var chartid = "charteditor";
+  
+// Manually see if chartid is in pkgs (not all browsers support Array.indexOf)
+var i, newPackage = true;
+for (i = 0; newPackage && i < pkgs.length; i++) {
+if (pkgs[i] === chartid)
+newPackage = false;
+}
+if (newPackage)
+  pkgs.push(chartid);
+  
+// Add the drawChart function to the global list of callbacks
+callbacks.push(drawChartLineChartIDb5818054e24);
+})();
+function displayChartLineChartIDb5818054e24() {
+  var pkgs = window.__gvisPackages = window.__gvisPackages || [];
+  var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
+  window.clearTimeout(window.__gvisLoad);
+  // The timeout is set to 100 because otherwise the container div we are
+  // targeting might not be part of the document yet
+  window.__gvisLoad = setTimeout(function() {
+  var pkgCount = pkgs.length;
+  google.load("visualization", "1", { packages:pkgs, callback: function() {
+  if (pkgCount != pkgs.length) {
+  // Race condition where another setTimeout call snuck in after us; if
+  // that call added a package, we must not shift its callback
+  return;
+}
+while (callbacks.length > 0)
+callbacks.shift()();
+} });
+}, 100);
+}
+ 
+// jsFooter
+</script>
+ 
+<!-- jsChart -->  
+<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartLineChartIDb5818054e24"></script>
+ 
+<!-- divChart -->
+<input type='button' onclick='openEditorLineChartIDb5818054e24()' value='lifeExp'/>  
+<div id="LineChartIDb5818054e24" 
+  style="width: 500; height: automatic;">
+</div>
+ <div><span>Data: data &#8226; Chart ID: <a href="Chart_LineChartIDb5818054e24.html">LineChartIDb5818054e24</a> &#8226; <a href="https://github.com/mages/googleVis">googleVis-0.5.10</a></span><br /> 
+<!-- htmlFooter -->
+<span> 
+  R version 3.2.0 (2015-04-16) 
+  &#8226; <a href="https://developers.google.com/terms/">Google Terms of Use</a> &#8226; <a href="https://google-developers.appspot.com/chart/interactive/docs/gallery/linechart">Documentation and Data Policy</a>
+</span></div>
+</body>
+</html>
